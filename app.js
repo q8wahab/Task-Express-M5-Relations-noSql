@@ -6,6 +6,7 @@ const postsRoutes = require("./api/posts/posts.routes");
 const connectDb = require("./database");
 const authorRouter = require("./api/authors/authors.routes");
 const CreatRouter = require("./api/authors/authors.routes");
+const TagRouter = require("./api/tags/tags.routes");
 
 connectDb();
 app.use(express.json());
@@ -15,6 +16,7 @@ app.use(cors());
 app.use("/posts", postsRoutes);
 app.use("/authors", authorRouter);
 app.use("/authors", CreatRouter);
+app.use("/tags", TagRouter);
 
 app.use((req, res, next) => {
   res.status(404).json({ message: "Path not found" });

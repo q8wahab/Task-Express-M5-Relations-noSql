@@ -1,6 +1,6 @@
 const Author = require("../../models/Author");
 const Post = require("../../models/Post");
-const Tag = require("../../models/Tag");
+const Tag = require("../../models/tag");
 
 exports.fetchPost = async (postId, next) => {
   try {
